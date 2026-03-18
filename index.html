@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Picoteo De La Tía Lucy 2 - Sabor Peruano en Santiago</title>
+    <meta name="description" content="Disfruta del auténtico sabor peruano en Santiago de Chile. Pescados, Criollazos, Chifa y más en Picoteo De La Tía Lucy 2.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <!-- Supabase Client -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+    <header id="header">
+        <nav class="container">
+            <div class="logo">
+                <span class="logo-text">Picoteo de la <span class="highlight">tía Luci</span></span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#menu">Menú</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+            <div class="menu-toggle" id="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <section id="inicio" class="hero">
+        <div class="hero-content container">
+            <h1>El Sabor de <span class="highlight">Perú</span> en Santiago</h1>
+            <p>Tradición, pasión y el mejor sazón peruano en el corazón de Recoleta.</p>
+            <a href="#menu" class="btn btn-primary">Ver Menú</a>
+        </div>
+        <div class="hero-overlay"></div>
+    </section>
+
+    <section id="menu" class="menu-section container">
+        <div class="section-title">
+            <h2>Nuestro Menú</h2>
+            <div class="underline"></div>
+        </div>
+
+        <div class="filter-container">
+            <button class="filter-btn active" data-category="Todos">Todos</button>
+            <button class="filter-btn" data-category="1">Pescados</button>
+            <button class="filter-btn" data-category="2">Criollazos</button>
+            <button class="filter-btn" data-category="3">Chifa</button>
+            <button class="filter-btn" data-category="4">Parrilladas</button>
+            <button class="filter-btn" data-category="5">Brasas</button>
+            <button class="filter-btn" data-category="6">Jugos y Postres</button>
+        </div>
+
+        <div id="menu-grid" class="menu-grid">
+            <!-- Cards will be rendered here by JS -->
+        </div>
+    </section>
+
+    <section id="ubicacion" class="location-section container">
+        <div class="section-title">
+            <h2>Nuestra Ubicación</h2>
+            <div class="underline"></div>
+        </div>
+        <div class="location-content">
+            <p>Visítanos en el corazón de Recoleta:</p>
+            <p class="address">Av. La Paz 584, Recoleta</p>
+            <a href="https://maps.app.goo.gl/97F6gM6fH5f1tXv78" target="_blank" class="btn btn-secondary">Ver en Google Maps</a>
+        </div>
+    </section>
+
+    <section id="contacto-cta" class="contact-cta-section">
+        <div class="cta-inner container">
+            <h2>¿Quieres hacer un pedido?</h2>
+            <p>Llámanos o escríbenos directamente</p>
+            <div class="cta-btns">
+                <a href="tel:+56986121222" class="btn btn-phone">+56 9 8612 1222</a>
+                <a href="https://wa.me/56986121222" target="_blank" class="btn btn-whatsapp">WhatsApp</a>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contacto">
+        <div class="container footer-content">
+            <div class="footer-info">
+                <h3>Picoteo de la tía Luci</h3>
+                <p><i class="icon-location"></i> Av. La Paz 584, Recoleta, Santiago</p>
+                <p><i class="icon-phone"></i> +56 9 8612 1222</p>
+                <p><i class="icon-clock"></i> Horario: Cierra 11 PM</p>
+            </div>
+            <div class="footer-social">
+                <h4>Síguenos</h4>
+                <div class="social-links">
+                    <a href="#">FB</a>
+                    <a href="#">IG</a>
+                    <a href="#">WA</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Picoteo De La Tía Lucy 2. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

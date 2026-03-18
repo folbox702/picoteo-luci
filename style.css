@@ -1,0 +1,389 @@
+:root {
+    --primary-color: #D91023; /* Peruvian Red */
+    --secondary-color: #FFFFFF; /* White */
+    --accent-color: #FFD700; /* Gold */
+    --text-color: #333333;
+    --dark-color: #1A1A1A;
+    --light-gray: #F4F4F4;
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--secondary-color);
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+.highlight {
+    color: var(--primary-color);
+}
+
+/* Header & Nav */
+header {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-text {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: var(--dark-color);
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    font-weight: 600;
+    font-size: 1rem;
+    transition: var(--transition);
+}
+
+.nav-links a:hover {
+    color: var(--primary-color);
+}
+
+/* Hero */
+.hero {
+    height: 90vh;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?q=80&w=2069') center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--secondary-color);
+    padding-top: 80px;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    margin-bottom: 1.5rem;
+    font-family: 'Montserrat', sans-serif;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+    text-align: center;
+    line-height: 1.2;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 2.5rem;
+    max-width: 800px;
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+    text-align: center;
+}
+
+.btn {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    border: none;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+.btn-primary:hover {
+    background-color: #B00D1C;
+    transform: translateY(-3px);
+}
+
+.btn-secondary {
+    background-color: var(--dark-color);
+    color: var(--secondary-color);
+}
+
+.btn-whatsapp {
+    background-color: #25D366;
+    color: white;
+}
+
+.btn-phone {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* Menu Filters */
+.menu-section {
+    padding: 5rem 0;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 3.5rem;
+}
+
+.section-title h2 {
+    font-size: 2.5rem;
+    font-family: 'Montserrat', sans-serif;
+    color: var(--dark-color);
+}
+
+.underline {
+    width: 80px;
+    height: 4px;
+    background: var(--primary-color);
+    margin: 0.5rem auto 0;
+}
+
+.filter-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 3rem;
+}
+
+.filter-btn {
+    padding: 0.6rem 1.5rem;
+    border: 2px solid var(--primary-color);
+    background: transparent;
+    color: var(--primary-color);
+    font-weight: 600;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.filter-btn.active, .filter-btn:hover {
+    background: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+/* Menu Grid */
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2.5rem;
+}
+
+.menu-card {
+    background: var(--secondary-color);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    border: 1px solid rgba(217, 16, 35, 0.1);
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(217, 16, 35, 0.15);
+}
+
+.card-img {
+    height: 220px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    background-color: #f0f0f0;
+    width: 100%;
+}
+
+.card-img.placeholder::after {
+    content: 'Sabor Peruano';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #999;
+    font-weight: 600;
+}
+
+.badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: var(--accent-color);
+    color: var(--dark-color);
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+}
+
+.card-body {
+    padding: 1.5rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-body h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    color: var(--dark-color);
+    font-family: 'Montserrat', sans-serif;
+}
+
+.card-description {
+    font-size: 0.95rem;
+    color: #555;
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: flex-end; /* Align price to the right/bottom */
+    align-items: center;
+    margin-top: auto;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(0,0,0,0.05);
+}
+
+.price {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: var(--primary-color);
+}
+
+/* Location and Contact CTA */
+.location-section {
+    padding: 5rem 0;
+    text-align: center;
+}
+
+.location-content p {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.location-content .address {
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: var(--dark-color);
+    margin-bottom: 2rem;
+}
+
+.contact-cta-section {
+    background: var(--light-gray);
+    padding: 5rem 0;
+    text-align: center;
+}
+
+.cta-inner h2 {
+    font-size: 2.5rem;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 1rem;
+}
+
+.cta-inner p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.cta-btns {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+/* Footer */
+footer {
+    background: var(--dark-color);
+    color: #CCC;
+    padding: 4rem 0 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 3rem;
+    padding-bottom: 3rem;
+}
+
+.footer-info h3 {
+    color: var(--secondary-color);
+    margin-bottom: 1.5rem;
+}
+
+.footer-social h4 {
+    color: var(--secondary-color);
+    margin-bottom: 1.5rem;
+}
+
+.social-links {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.footer-bottom {
+    border-top: 1px solid #333;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+    
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero p {
+        font-size: 1.1rem;
+    }
+
+    .menu-grid {
+        grid-template-columns: 1fr;
+    }
+}
